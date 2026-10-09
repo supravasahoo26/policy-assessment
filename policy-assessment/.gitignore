@@ -1,0 +1,20 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Uploaded files and private data
+uploads/*
+!uploads/.gitkeep
+
+# OS and editor files
+.DS_Store
+.vscode/
