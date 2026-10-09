@@ -26,7 +26,7 @@ function startCpuMonitor() {
 
     if (usage >= threshold) {
       console.error(`CPU usage exceeded ${threshold}%. Restarting server...`);
-      // In production run under PM2/Docker/Kubernetes so the process is automatically restarted.
+      // Run under PM2/Docker/Kubernetes so the process is automatically restarted.
       clearInterval(timer);
       process.exit(1);
     }

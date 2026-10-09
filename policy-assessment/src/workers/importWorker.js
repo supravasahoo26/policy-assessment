@@ -19,7 +19,6 @@ function parseDate(value) {
     return new Date(Date.UTC(parsed.y, parsed.m - 1, parsed.d, parsed.H || 0, parsed.M || 0, parsed.S || 0)).toISOString();
   }
   const raw = String(value).trim();
-  // Parse YYYY-MM-DD as a UTC date to avoid locale-dependent ambiguity.
   const iso = raw.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/);
   if (iso) return new Date(Date.UTC(Number(iso[1]), Number(iso[2]) - 1, Number(iso[3]))).toISOString();
   const parsed = new Date(raw);
